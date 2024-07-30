@@ -19,8 +19,8 @@ namespace ContactApp
         public static List<AddressList> GetAddressList()
         {
             List<AddressList> list = new List<AddressList>();
-       /*     try
-            {*/
+            try
+            {
                 conn.Open();
                 cmd.CommandText = "SELECT * FROM AddressList";
                 reader = cmd.ExecuteReader();
@@ -33,11 +33,11 @@ namespace ContactApp
                     list.Add(addr);
                 }
                 conn.Close();
-               
-         /*   }
+
+            }
             catch (Exception e)
-            {*/
-              /*  {
+            {
+                {
                     MessageBox.Show(e.Message);
                 }
             }
@@ -47,7 +47,7 @@ namespace ContactApp
                 {
                     conn.Close();
                 }
-            }*/
+            }
             return list;
         }
     }
